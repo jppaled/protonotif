@@ -79,7 +79,7 @@ async function saveAccountInFile(data) {
   });
 }
 
-function sendNotification(unsername, nbUnread) {
+function sendNotification(username, nbUnread) {
   notifier.notify(
     {
       title: 'Protonotif',
@@ -101,7 +101,7 @@ async function getUnread(connectedAccount) {
   let unread = inbox.folders.inbox.unread;
 
   if (unread > 0) {
-    sendNotification(connectedAccount.unsername, unread);
+    sendNotification(connectedAccount.username, unread);
   }
 
   return unread;
