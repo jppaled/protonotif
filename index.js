@@ -83,7 +83,7 @@ function sendNotification(username, nbUnread) {
   notifier.notify(
     {
       title: 'Protonotif',
-      message: `${nbUnread} new email for ${unsername}`,
+      message: `${nbUnread} new email for ${username}`,
       icon: path.join(__dirname, 'icon.png'), // Absolute path (doesn't work on balloons)
       sound: true, // Only Notification Center or Windows Toasters
       wait: true // Wait with callback, until user action is taken against notification, does not apply to Windows Toasters as they always wait or notify-send as it does not support the wait option
@@ -118,7 +118,7 @@ app.post('/generatekey', async function (req, res) {
     const isKeyGenereted = await generate(password);
 
     if (isKeyGenereted) {
-      res.sendFile(path.join(__dirname, '/generateKeySuccess.html'));
+      res.sendFile(path.join(__dirname, '/templates/generateKeySuccess.html'));
     }
   }
 })
@@ -209,7 +209,7 @@ app.get('/unread/:email*?', async function(req, res) {
 })
 
 app.get('/add', function (req, res) {  
-  res.sendFile(path.join(__dirname, '/add.html'));
+  res.sendFile(path.join(__dirname, '/templates/add.html'));
 });
 
 app.get('/lock', function (req, res) {
@@ -218,12 +218,12 @@ app.get('/lock', function (req, res) {
 });
 
 app.get('/login', function (req, res) {
-  res.sendFile(path.join(__dirname, '/login.html'));
+  res.sendFile(path.join(__dirname, '/templates/login.html'));
 });
 
 app.get('/', async function (req, res) {  
   if(!fs.existsSync('private.key') || !fs.existsSync('public.key')) {
-    res.sendFile(path.join(__dirname, '/generateKey.html'));
+    res.sendFile(path.join(__dirname, '/templates/generateKey.html'));
   } else {
     if (PASSPHRASE != null) {
 
@@ -252,7 +252,7 @@ app.get('/', async function (req, res) {
       });
     })
 
-      res.sendFile(path.join(__dirname, '/index.html'));
+      res.sendFile(path.join(__dirname, '/templates/index.html'));
     } else {
       res.redirect(301, '/login')
     }
