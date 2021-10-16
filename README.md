@@ -11,7 +11,8 @@ npm start
 ```
 ## How to use it
 - Go to [localhost:3010](http://localhost:3010)
-- Follow indications
+- Create protonotif password
+- add protonmail account
 
 Once your had add your protonmail account, you can go to [unread](http://localhost:3010/unread), to get a JSON that show how many unread messages you have for each account.
 
