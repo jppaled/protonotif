@@ -52,7 +52,7 @@ async function getAccountFromFile() {
   
   await privateKey.decrypt(PASSPHRASE);  
   
-  const encryptedData = fs.readFileSync('accounts.json');
+  const encryptedData = fs.readFileSync('accounts');
   
   const decrypted = await openpgp.decrypt({
     message: await openpgp.message.readArmored(encryptedData),
@@ -71,7 +71,7 @@ async function saveAccountInFile(data) {
   }); 
 
   // save private key into file
-  fs.writeFile('accounts.json', encrypted.data, function (err) {
+  fs.writeFile('accounts', encrypted.data, function (err) {
     if (err) return console.log(err);
 
     // if succefully create encrypted file
