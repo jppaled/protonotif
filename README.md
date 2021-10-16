@@ -37,3 +37,12 @@ I use this for a cron to check if I got some unread messages
 - openpgp@4.10.10 (not @5 because of node@10
 - path
 - protonmail-api
+
+## Waiting for selector `#ptSidebar` failed... Error
+If you see this error, that mean that the web page return the prontmail page with the captcha to fill
+
+I don't have a solution for this because I didn't develop the custom protonmail-api,
+
+And this custom api is no longer maintened,
+
+Wait some hours or try to connect to a VPN and retry
