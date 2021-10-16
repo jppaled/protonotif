@@ -242,13 +242,6 @@ app.get('/', async function (req, res) {
       })
       .catch((err) => {
         console.log(err);
-
-        console.log(
-          'If you see an  error with "waiting for selector `#ptSidebar` failed...", that mean that the web page return the prontmail page with the captcha to fill',
-          'I don\'t have a solution for this because I don\'t develop the custom protonmail-api',
-          'And this custom api is no longer maintened',
-          'Wait some hours or try to connect to a VPN and retry'
-        );
       });
     })
 
