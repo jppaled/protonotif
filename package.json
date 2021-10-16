@@ -1,0 +1,20 @@
+{
+  "name": "protonotif",
+  "version": "1.0.0",
+  "description": "Protonmail unread message notifications via api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "jppaled",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "node-notifier": "^10.0.0",
+    "openpgp": "^4.10.10",
+    "path": "^0.12.7",
+    "protonmail-api": "^2.2.0"
+  }
+}
