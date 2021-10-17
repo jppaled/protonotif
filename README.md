@@ -34,7 +34,7 @@ I use this for a cron to check if I got some unread messages
 - express
 - fs
 - node-notifier
-- openpgp@4.10.10 (not @5 because of node@10
+- openpgp@4.10.10 (not @5 because of node@10)
 - path
 - protonmail-api
 
