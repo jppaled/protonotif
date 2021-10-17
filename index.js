@@ -253,5 +253,5 @@ app.get('/', async function (req, res) {
 });
 
 app.listen(3010, function () {
-
+  console.log('Go to http://localhost:3010')
 });
